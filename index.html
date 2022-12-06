@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <link rel="shortcut icon" href="./assets/devchallenges.png" type="image/png">
+    <title>Checkout</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <script src="https://kit.fontawesome.com/98e7fc655d.js" crossorigin="anonymous"></script>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JS Files -->
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <form id="main-form">
+    <main>
+            <!-- Cart summary -->
+            <aside class="product-box">
+                <div class="list-products">
+                    <section class="product-info">
+                        <picture>
+                            <img src="./assets/photo1.png" alt="Modern Green Backbag">
+                        </picture>
+                        <div class="info">
+                            <h3>Vintage Backbag</h3>
+                            <div class="price-container">
+                                <span class="price">$54.99</span>
+                                <span class="sale-price">$94.99</span>
+                            </div>
+                            <div class="quantity">
+                                <button class="btn-q q-minus">-</button>
+                                <input type="number" class="quantity-form" name="quantity" id="input-quantity1" value="1" min="1" max="99" maxlength="2">
+                                <button class="btn-q q-plus">+</button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-info">
+                        <picture>
+                            <img src="./assets/photo2.png" alt="Levi Shoes">
+                        </picture>
+                        <div class="info">
+                            <h3>Levi Shoes</h3>
+                            <div class="price-container">
+                                <span class="price">$74.99</span>
+                                <span class="sale-price">$124.99</span>
+                            </div>
+                            <div class="quantity">
+                                <button class="btn-q q-minus">-</button>
+                                <input type="number" class="quantity-form" name="quantity" id="input-quantity2" value="1" min="1" max="99" maxlength="2">
+                                <button class="btn-q q-plus">+</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="payment-summary">
+                    <div class="line">
+                        <span class="description">Shipping</span>
+                        <span class="description-price">$19</span>
+                    </div>
+                    <div class="line">
+                        <span class="description">Total</span>
+                        <span class="description-price">$148.98</span>
+                    </div>
+                </div>
+            </aside>
+            <!-- Input Form -->
+            <article class="checkout-form">
+                    <div class="contact-info">
+                        <h3>Contact information</h3>
+                        <div class="input-group">
+                            <label for="contact-email">E-mail</label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input class="form-input" type="email" name="contact-email" id="contact-email" placeholder="Enter your email..." required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="contact-phone">Phone</label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-phone"></i>
+                                <input class="form-input" type="tel" name="contact-phone" id="contact-phone" placeholder="Enter your phone..." required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shipping-address">
+                        <h3>Shipping address</h3>
+                        <div class="input-group">
+                            <label for="shipping-user-name">Full name</label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <input class="form-input" type="text" name="shipping-user-name" id="shipping-user-name" placeholder="Enter your name..." required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="shipping-address-name">Address</label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-house"></i>
+                                <input class="form-input" type="text" name="shipping-address-name" id="shipping-address-name" placeholder="Your address..." required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="shipping-city">City</label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-city"></i>
+                                <input class="form-input" type="text" name="shipping-city" id="shipping-city" placeholder="Your city..." required>
+                            </div>
+                        </div>
+                        <div class="two-input-group">
+                            <div class="input-group half">
+                                <label for="shipping-country">Country</label>
+                                <div class="icon-input">
+                                    <i class="fa-solid fa-city"></i>
+                                    <select class="form-input" name="shipping-country" id="shipping-country" required>
+                                        <option value="0">Your country...</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="GER">Germany</option>
+                                        <option value="ITA">Italy</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group half">
+                                <label for="shipping-zip">Postal code</label>
+                                <div class="icon-input">
+                                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                                    <input class="form-input" type="text" name="shipping-zip" id="shipping-zip" placeholder="Your postal code..." required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="save-info" id="check-sabe-info" required>
+                            <label for="check-sabe-info">Save this information for next time</label>
+                        </div>
+                        <div class="form-btn">
+                            <button type="submit" id="btn-continue">Continue</button>
+                        </div>
+                    </div>
+            </article>
+        </main>
+    </form>
+    <div class="alert-bg hide">z</div>
+    <div class="form-alert hide">
+        <div class="alert-card">
+            <h4>Datos registrados correctamente</h4>
+            <button type="button" id="btn-reload">Ok</button>
+        </div>
+    </div>
+    <footer>
+        <p>created by <b>MaikDev3</b> - devchallenges.io</p>
+    </footer>
+</body>
+</html>
